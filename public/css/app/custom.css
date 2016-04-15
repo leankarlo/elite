@@ -63,12 +63,18 @@
 
 .list-unstyled ol {
 	padding: 5px;
+	text-align: left;
+	margin-left: 60px;
 }
 /*mobile*/
 @media (max-width: 768px) {
 	.page-content {
 		margin-top: 0;
 	}
+	.list-unstyled ol {
+		padding: 5px;
+		text-align: center;
+		}
 }
 @media (min-width: 768px) {
 }
