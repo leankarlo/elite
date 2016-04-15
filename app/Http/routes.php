@@ -431,5 +431,9 @@ Route::get('/interpreting', function () {
 Route::get('/translation', function () {
 	    return view('app/translation/index');
 	});
+
+Route::get('/contact', function () {
+	    return view('app/contact/index');
+	});
 	
 /** END Web App Route **/	
