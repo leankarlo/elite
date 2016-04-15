@@ -105,6 +105,63 @@
         <!-- SUBSCRIBE END -->
 
         <!-- PAGE FOOTER -->
+        <div class="footer footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                        <h3>SITEMAP</h3>
+                        <ul class="list-unstyled">
+                            <ol><a href="#">Home</a></ol>
+                            <ol><a href="#">Company</a></ol>
+                            <ol><a href="#">Service</a></ol>
+                            <ol><a href="#">Industries We Serve</a></ol>
+                            <ol><a href="#">Press</a></ol>
+                            <ol><a href="#">Contract</a></ol>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <h3>SERVICES</h3>
+                        <ul class="list-unstyled">
+                            <ol><a href="#">Translation</a></ol>
+                            <ol><a href="#">Interpreting</a></ol>
+                            <ol><a href="#">Transcription</a></ol>
+                            <ol><a href="#">Proof Reading</a></ol>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <h3>SUPPORT</h3>
+                        <ul class="list-unstyled">
+                            <ol><a href="#">FAQs</a></ol>
+                            <ol><a href="#">Support</a></ol>
+                            <ol><a href="#">Chat Live</a></ol>
+                            <ol><a href="#">Contact Us</a></ol>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <h3>Contact</h3>
+                        <ul class="list-unstyled">
+                            <ol><a href="#"><i class="icon-map" style="color: red;"></i>    11th Floor Cyberone Building</br>Eastwood Cyberzone Libis QC</a></ol>
+                            <ol><a href="#"><i class="icon-call-end" style="color: red;"></i>   +63 2 975 1046</a></ol>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <p style="margin-top: 35px; color:#3f5263;">copyrights 2016 Elite Workgroup. All Rights Reserved</p>
+                    </div>
+                    <div class="col-md-4 col-sm-4" style="text-align: center;">
+                        <img class="logo-default" src="../../../../../images/app/logo_default.png" alt="Logo">
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <ul class="copyright-socials">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- PAGE FOOTER END -->
 
     </div>

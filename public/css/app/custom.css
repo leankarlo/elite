@@ -57,6 +57,13 @@
     -webkit-box-shadow: 15px 15px 20px 0px #545454;
     box-shadow:         15px 15px 20px 0px #545454;
 }
+.list-unstyled ol a {
+	color: #3f5263;
+}
+
+.list-unstyled ol {
+	padding: 5px;
+}
 /*mobile*/
 @media (max-width: 768px) {
 	.page-content {

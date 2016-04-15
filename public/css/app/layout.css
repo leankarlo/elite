@@ -1860,7 +1860,7 @@ a:focus {
 	[FOOTER]
 ----------------------------------------------------*/
 .footer {
-  background: #2c3a46;
+  background: #fff;
   padding: 100px 0 100px 0;
 }
 
@@ -1870,22 +1870,23 @@ a:focus {
 .footer-copyright {
   padding: 50px 0;
   text-align: center;
-  background: #25303a;
+  background: #fff;
 }
 .footer-copyright h3 {
   font-size: 30px;
   margin: 0 0 40px;
   text-transform: uppercase;
-  color: #fff;
+  color: #3f5263;
 }
 .footer-copyright p {
   margin-bottom: 0;
-  color: #8693a7;
+  color: #3f5263;
 }
 .footer-copyright .copyright-socials {
   padding: 0;
-  margin-bottom: 40px;
+  margin-top: 40px;
   list-style: none;
+  text-align: right;
 }
 .footer-copyright .copyright-socials li {
   padding: 0 3px;
@@ -1895,15 +1896,17 @@ a:focus {
   width: 35px;
   height: 35px;
   padding: 10px;
-  color: #4a5a69;
+  color: #3f5263;
   font-size: 16px;
   text-align: center;
-  background: #2b3641;
+  background: #fff;
+  border: solid 1px #3f5263;
+  border-radius: 5px;
   display: inline-block;
 }
 .footer-copyright .copyright-socials li i:hover {
-  background: #303c47;
-  color: #fff;
+  background: #a3a0a3;
+  color: #3f5263;
   transition-duration: 400ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
