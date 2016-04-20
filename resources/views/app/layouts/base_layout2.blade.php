@@ -170,6 +170,7 @@
 	<script src="{{ asset('packages/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
 	<!-- END CORE PLUGINS -->
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="{{ asset('packages/jquery-ui/jquery-ui.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('packages/jquery.easing.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('packages/jquery.parallax.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('packages/smooth-scroll/smooth-scroll.js') }}" type="text/javascript"></script>

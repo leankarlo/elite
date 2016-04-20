@@ -2,6 +2,43 @@
 body {
 	font-family: 'Open Sans' !important;
 }
+
+
+/*Accordioin design*/
+.panel {
+	/*border-top : thin solid #c8c8c8;*/
+	border-bottom : thin solid #dbdbdb;
+	border-radius: 0px;
+}
+
+.panel-title {
+	border-bottom : none;
+}
+
+#accordion3 .panel h4 {
+	font-size: 24px;
+	color: #c72b2d;
+}
+
+#accordion3 .panel h4.panel-title {
+	padding: 20px;
+}
+
+.panel-sidebar {
+	background: #dbdbdb;
+}
+
+.panel-heading2 {
+	background: #444;
+	color: #fff;
+	padding: 10px;
+}
+
+#accordion3 h4.active
+	color: #C62B2D !important;
+	background: yellow;
+}
+
 .pull-right {
 	float: right;
 }
