@@ -50,7 +50,7 @@
     	    </div>        
     	</div>
 
-        <nav class="navbar navbar-fixed-top" role="navigation" style="min-height: 90px!important;">
+        <nav class="navbar navbar-fixed-top" role="navigation" style="min-height: 100px!important;">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
@@ -86,18 +86,14 @@
         @yield('content')
 
         <!-- SUBSCRIBE BEGIN -->
-        <div class="subscribe">
+
+        <div class="jointeam">
             <div class="container">
-                <div class="subscribe-wrap">
-                    <div class="subscribe-body subscribe-desc md-margin-bottom-30">
-                        <h1>WE SEARCH GREAT PERSON</h1>
-                    </div>
-                    <div class="subscribe-body">
-                        <form class="form-wrap input-field">
-                            <div class="form-wrap-group">
-                                <button type="submit" class="btn-danger btn-md btn-block">Join our Team</button>
-                            </div>
-                        </form>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="jointeam-body jointeam-body">
+                            @yield('footerheadbanner')
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,14 +136,14 @@
                     <div class="col-md-3 col-sm-3">
                         <h3>Contact</h3>
                         <ul class="list-unstyled">
-                            <ol><a href="#"><i class="icon-map" style="color: red;"></i>    11th Floor Cyberone Building</br>Eastwood Cyberzone Libis QC</a></ol>
+                            <ol><a href="#"><i class="icon-map" style="color: red;"></i>    11th Floor Cyberone Building Eastwood Cyberzone Libis QC</a></ol>
                             <ol><a href="#"><i class="icon-call-end" style="color: red;"></i>   +63 2 975 1046</a></ol>
                         </ul>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
-                        <p style="margin-top: 35px; color:#3f5263;">copyrights 2016 Elite Workgroup. All Rights Reserved</p>
+                        <p style="margin-top: 35px; color:#777777;">copyrights 2016 Elite Workgroup. All Rights Reserved</p>
                     </div>
                     <div class="col-md-4 col-sm-4" style="text-align: center;">
                         <img class="logo-default" src="../../../../../images/app/logo_default.png" alt="Logo">

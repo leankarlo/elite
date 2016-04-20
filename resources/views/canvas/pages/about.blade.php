@@ -1,104 +1,149 @@
-@extends('layouts.admin_layout')
+@extends('canvas.layouts.dashboard.mainlayout')
 
-@section('head')
-<!-- BEGIN PAGE LEVEL STYLES -->
-<link rel="stylesheet" type="text/css" href="{{ URL::to('packages/select2/select2.css') }}"/>
-<link rel="stylesheet" type="text/css" href="{{ URL::to('packages/bootstrap-wysihtml5/bootstrap-wysihtml5.css') }}"/>
-<link rel="stylesheet" type="text/css" href="{{ URL::to('packages/bootstrap-markdown/css/bootstrap-markdown.min.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ URL::to('packages/bootstrap-datepicker/css/datepicker.css') }}"/>
-<!-- END PAGE LEVEL SCRIPTS -->
+@section('title')
+	<title>{{ Config::get('app.name') }} | Manage Home Page Slider </title>
 @stop
 
+@section('head')
+	<!-- BEGIN PAGE STYLES -->
+	<link href="{{ asset('packages/select2/select2.css')}}" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="{{ asset('packages/datatables/plugins/bootstrap/dataTables.bootstrap.css')}}"/>
+	<!-- END PAGE STYLES -->
+@stop
+
+
 @section('content')
-	
-	<h3 class="page-title">
-		About Us <small>Management</small>
-	</h3>
 
 	<div class="row">
 		<div class="col-md-12">
-			<?php 
-			$result = Session::get('result');
-			?>
-			@if($result == 'Failed')
-				<div class="alert alert-danger ">
-					<button class="close" data-close="alert"></button>
-					<span>
-					{{ Session::get('message') }}</span>
-				</div>
-			@elseif($result == 'Success')
-				<div class="alert alert-success ">
-					<button class="close" data-close="alert"></button>
-					<span>
-					{{ Session::get('message') }}</span>
-				</div>
-			@endif
-			<!-- BEGIN VALIDATION STATES-->
-			<div class="portlet">
+			<div class="portlet light">
 				<div class="portlet-title">
 					<div class="caption">
-						<i class="fa fa-gift"></i>About Us Form
+						<i class="icon-notebook"></i>Manage Home Page Slider 
 					</div>
 				</div>
 				<div class="portlet-body form">
-					<!-- BEGIN FORM-->
-					{{ Form::open(array('action' => 'AboutUsController@edit','class'=>'form-horizontal', 'method'=>'post','files'=> 'true')) }}
-						<div class="form-body">
-							<div class="alert alert-danger display-hide">
-								<button class="close" data-close="alert"></button>
-								You have some form errors. Please check below.
-							</div>
-							<div class="alert alert-success display-hide">
-								<button class="close" data-close="alert"></button>
-								Your form validation is successful!
-							</div>
-							
-							<div class="form-group">
-								<label class="control-label col-md-3">WYSIHTML5 Editor <span class="required">
-								* </span>
-								</label>
-								<div class="col-md-9">
-									<textarea class="wysihtml5 form-control" rows="6" name="content" data-error-container="#editor1_error">{{ $about->content }}</textarea>
-									<div id="editor1_error">
-									</div>
+					<div class="table-toolbar">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="btn-group ">
+									<a href="#add_promo" data-toggle="modal" class="btn green">
+										Add New <i class="fa fa-plus"></i>
+									</a>
 								</div>
 							</div>
-						</div>
-						<div class="form-actions">
-							<div class="row">
-								<div class="col-md-offset-3 col-md-9">
-									<button type="submit" class="btn green">Submit</button>
-								</div>
+							<div class="col-md-6">
 							</div>
 						</div>
-					{{ Form::close() }}
-					<!-- END FORM-->
+					</div>
+
+					<table class="table table-striped table-bordered table-hover" id="SliderTable">
+						<thead>
+							<tr>
+								<th>Title</th>
+                            	<th>Status</th>
+                            	<th>Image</th>
+                            	<th>Action</th>
+                            </tr>
+						</thead>
+						<tbody id="table_body">
+						</tbody>
+					</table>
 				</div>
-				<!-- END VALIDATION STATES-->
 			</div>
 		</div>
 	</div>
 
+	{{-- MODALS --}}
+	<!-- /.modal -->
+	<div class="modal fade bs-modal-lg" id="add_promo" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button> -->
+					<h4 class="modal-title">Add Slider</h4>
+				</div>
+				<div class="modal-body">
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-globe"></i>Slider Form
+							</div>
+						</div>
+						<div class="portlet-body">
+							{!! Form::open(array('action' => 'Canvas\SliderController@create' ,'class'=>'form-horizontal form_article', 'id' => 'form_article', 'method'=>'post','files'=> 'true')) !!}
+
+								<div class="form-body">
+									{{-- Title --}}
+									<div class="form-group form-md-line-input">
+										<label class="col-md-3 control-label">Title</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" name="title" id="title" placeholder="Enter text">
+										</div>
+									</div>
+		
+									{{-- Article Content --}}
+									<div class="form-group form-md-line-input ">
+										<label class="col-md-3 control-label">Desciption</label>
+										<div class="col-md-9">
+											<textarea class="form-control" name="content" id="content" rows="6"></textarea>
+										</div>
+									</div>
+		
+									{{-- primary photo --}}
+									<div class="form-group form-md-line-input">
+										<label class="col-md-3 control-label">Featured Photo</label>
+										<div class="col-md-4" id="displayImg">
+											<a class="btn default" data-toggle="modal" href="#image_selection" onclick="loadImageTable()">Select a Primary Photo </a>
+										</div>
+									</div>
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-3 col-md-9">
+											<button type="submit" class="btn green">Save</button>
+										</div>
+									</div>
+								</div>
+							{!! Form::close() !!}
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				</div>
+				<div class="modal-footer">
+					<!-- <button type="button" class="btn default" data-toggle="modal" href="#uploadImage">Upload</button> -->
+					<button type="button" class="btn default" data-dismiss="modal" >Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	
+	<!-- Selecting Primary Photo -->
+	@include('canvas.modals.selectimagemodal')
+
 @endsection
 
+
 @section('buttom_scripts')
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script type="text/javascript" src="{{ URL::to('packages/jquery-validation/js/jquery.validate.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::to('packages/jquery-validation/js/additional-methods.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::to('packages/select2/select2.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::to('packages/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
-<script type="text/javascript" src="{{ URL::to('packages/bootstrap-wysihtml5/wysihtml5-0.3.0.js') }}"></script>
-<script type="text/javascript" src="{{ URL::to('packages/bootstrap-wysihtml5/bootstrap-wysihtml5.js') }}"></script>
-<script type="text/javascript" src="{{ URL::to('packages/ckeditor/ckeditor.js') }}"></script>
-<script type="text/javascript" src="{{ URL::to('packages/bootstrap-markdown/js/bootstrap-markdown.js') }}"></script>
-<script type="text/javascript" src="{{ URL::to('packages/bootstrap-markdown/lib/markdown.js') }}"></script>
-<!-- END PAGE LEVEL PLUGINS -->
-<!-- BEGIN PAGE LEVEL STYLES -->
-<script src="{{ URL::to('javascripts/admin/pages/about/about.js') }}" type="text/javascript"></script>
-<!-- END PAGE LEVEL STYLES -->
-<script>
-jQuery(document).ready(function() {
-   	FormValidation.init();
-});
-</script>
+
+	<!-- BEGIN PAGE SCRIPTS -->
+	<script type="text/javascript" src="{{ asset('packages/select2/select2.min.js')}}"></script>
+	<script type="text/javascript" src="{{ asset('packages/datatables/media/js/jquery.dataTables.min.js')}}"></script>
+	<script type="text/javascript" src="{{ asset('packages/datatables/plugins/bootstrap/dataTables.bootstrap.js')}}"></script>
+	<script src="{{ asset('packages/jquery-validation/js/jquery.validate.js') }}" type="text/javascript"></script>
+
+	<script src="{{ asset('js/admin/pages/pages/slidermanagement.js')}}"></script>
+	<script>
+	jQuery(document).ready(function() {   
+	   Slider.init();
+	   Slider.initImages();
+	});
+	</script>
+
+	<!-- END PAGE SCRIPTS -->
+
 @stop

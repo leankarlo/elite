@@ -328,8 +328,18 @@
 						array('uses'=>'Canvas\ContactController@activate'));
 						
 					});
-				/** END Promos **/
+				/** END Contact **/
 				
+				/** about **/
+					Route::group(array('prefix'=>'about'), function(){
+					
+						Route::get('/', function () {
+							return view('canvas/pages/about');
+						});
+						
+					});
+				/** END Contact **/
+
 			});
 		/** END Pages Module **/
 

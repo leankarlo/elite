@@ -50,7 +50,7 @@
     	    </div>        
     	</div>
 
-        <nav class="navbar navbar-fixed-top" role="navigation" style="min-height: 90px!important;">
+        <nav class="navbar navbar-fixed-top" role="navigation" style="min-height: 100px!important;">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
