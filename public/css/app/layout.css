@@ -1433,6 +1433,14 @@ a:focus {
   margin-top: 60px;
 }
 
+.about-readmore {
+  /*display: none;*/
+}
+
+.about-readmore h2{
+  font-size: 24px;
+}
+
 .about-list ul ol {
   margin-bottom: 50px;
 }

@@ -33,10 +33,32 @@
                     <h1>About Us</h1>
                     <p>Maecenas congue tortor luctus neque placerat, vestibulum suscipit turpis vulputate. Proin nec lorem molestie, sagittis dui et, aliquam leo. Vestibulum risus diam, malesuada efficitur malesuada.</p>
 
-                    <a href="#">read more <i class="fa fa-long-arrow-right"></i></a>
+                    <a href="javascript:aboutMore();">read more <i class="fa fa-long-arrow-right"></i></a>
                 </div>
                 <div class="col-md-6 col-sm-6 pad-right">
                     <img class="logo-default" src="../../../../../images/app/about/aboutimg1.png" alt="Logo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="about-readmore" >
+                    <div class="col-md-4 col-sm-4"> 
+                        <h2><i class="icon-user"></i> Amazing Support</h2>
+                        <p>We can help you every step of the way, from the time you sign up we're always availableto help you   configure and create your actions and tune your reminders for the best result.</p>
+    
+                        <a href="#">Learn more <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                    <div class="col-md-4 col-sm-4"> 
+                        <h2><i class="icon-calendar"></i> Action Schedule</h2>
+                        <p>We can help you every step of the way, from the time you sign up we're always availableto help you   configure and create your actions and tune your reminders for the best result.</p>
+    
+                        <a href="#">Learn more <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                    <div class="col-md-4 col-sm-4"> 
+                        <h2><i class="icon-bell"></i> Invoice Reminders</h2>
+                        <p>We can help you every step of the way, from the time you sign up we're always availableto help you   configure and create your actions and tune your reminders for the best result.</p>
+    
+                        <a href="#">Learn more <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,7 +111,7 @@
                     <h1>Languages</h1>
                     <p>Maecenas congue tortor luctus neque placerat, vestibulum suscipit turpis vulputate. Proin nec lorem molestie, sagittis dui et, aliquam leo. Vestibulum risus diam, malesuada efficitur malesuada.</p>
 
-                    <a href="#">read more <i class="fa fa-long-arrow-right"></i></a>
+                    <a href="#" >read more <i class="fa fa-long-arrow-right"></i></a>
                 </div>
 
             </div>
@@ -104,5 +126,5 @@
 @stop
 
 @section('buttom_scripts')
-
+    <script src="{{ asset('js/app/pages/translation.js') }}" type="text/javascript"></script>
 @stop
