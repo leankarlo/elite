@@ -3,7 +3,9 @@ body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-
+.btn-default {
+	padding: 10px;
+}
 /*Accordioin design*/
 .panel {
 	/*border-top : thin solid #c8c8c8;*/
@@ -103,9 +105,9 @@ body {
     background-repeat:   no-repeat;
     background-position: center center; 
 	height: 400px;
-	-moz-box-shadow:    15px 15px 20px 0px #545454;
-    -webkit-box-shadow: 15px 15px 20px 0px #545454;
-    box-shadow:         15px 15px 20px 0px #545454;
+	-moz-box-shadow:    15px 15px 20px 0px #d1d1d1;
+    -webkit-box-shadow: 15px 15px 20px 0px #d1d1d1;
+    box-shadow:         15px 15px 20px 0px #d1d1d1;
 }
 
 .aboutgrey {
@@ -268,10 +270,10 @@ body {
 	.about-desc {
 	  background: #fff;
 	  padding: 40px;
-	  -moz-box-shadow:    15px 15px 20px 0px #545454;
-	  -webkit-box-shadow: 15px 15px 20px 0px #545454;
-	  box-shadow:         15px 15px 20px 0px #545454;
-	  margin: 250px 20px 20px 20px;
+	    -moz-box-shadow:    5px 5px 10px 0px #d1d1d1;
+        -webkit-box-shadow: 5px 5px 10px 0px #d1d1d1;
+  		box-shadow:         5px 5px 10px 0px #d1d1d1;
+	  	margin: 250px 20px 20px 20px;
 	}
 
 }
@@ -283,6 +285,23 @@ body {
 /*mobile*/
 @media (max-width: 768px) {
 
+	/*--------------------------------------------------
+	  [footer]
+	----------------------------------------------------*/
+	.list-footer {
+  	text-align: center;
+	}
+
+	.footer-copyright h3 {
+	  text-align: center;
+	  margin: 15px;
+	  margin-top: 25px;
+	}
+
+	.footer-copyright .copyright-socials {
+	  text-align: center;
+	  margin-top: 0px;
+	}
 	/*--------------------------------------------------
 	  [about-vision]
 	----------------------------------------------------*/
@@ -297,9 +316,9 @@ body {
 	.about-desc {
 	  background: #fff;
 	  padding: 40px;
-	  -moz-box-shadow:    15px 15px 20px 0px #545454;
-	  -webkit-box-shadow: 15px 15px 20px 0px #545454;
-	  box-shadow:         15px 15px 20px 0px #545454;
+	  -moz-box-shadow:    5px 5px 5px 0px #d1d1d1;
+	  -webkit-box-shadow: 5px 5px 5px 0px #d1d1d1;
+	  box-shadow:         5px 5px 5px 0px #d1d1d1;
 	  margin: 0px 0px 50px 0px;
 	}
 

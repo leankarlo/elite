@@ -28,7 +28,21 @@
 
     <section class="about-cont">
         <div class="container">
+            <div class="row margin-bottom-40">
+                <div class="col-md-12 col-sm-12">
+                    <div class="about-main">
+                        <p>Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio.</p>
 
+                        <p>Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio.</p>
+
+                        <p>Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio.</p>
+
+                        <p>Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio.</p>
+
+                        <p>Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio. Donec sollicitudin felis ac ex pellentesque, sed placerat ex tempus. Vivamus id vehicula odio.</p>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <div class="about-list">

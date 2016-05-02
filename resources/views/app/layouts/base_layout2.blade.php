@@ -105,55 +105,56 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
-                        <h3>SITEMAP</h3>
-                        <ul class="list-unstyled">
-                            <ol><a href="#">Home</a></ol>
-                            <ol><a href="#">Company</a></ol>
-                            <ol><a href="#">Service</a></ol>
-                            <ol><a href="#">Industries We Serve</a></ol>
-                            <ol><a href="#">Press</a></ol>
-                            <ol><a href="#">Contract</a></ol>
-                        </ul>
+                        <img class="logo-footer" src="../../../../../images/app/logo_default.png" alt="Logo">
                     </div>
                     <div class="col-md-3 col-sm-3">
-                        <h3>SERVICES</h3>
-                        <ul class="list-unstyled">
-                            <ol><a href="#">Translation</a></ol>
-                            <ol><a href="#">Interpreting</a></ol>
-                            <ol><a href="#">Transcription</a></ol>
-                            <ol><a href="#">Proof Reading</a></ol>
+                        <ul class="list-footer">
+                            <li><a href="#">Customer</a></li>
+                            <li><a href="#">Translator</a></li>
+                            <li><a href="#">Partners</a></li>
                         </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
-                        <h3>SUPPORT</h3>
-                        <ul class="list-unstyled">
-                            <ol><a href="#">FAQs</a></ol>
-                            <ol><a href="#">Support</a></ol>
-                            <ol><a href="#">Chat Live</a></ol>
-                            <ol><a href="#">Contact Us</a></ol>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
-                        <h3>Contact</h3>
-                        <ul class="list-unstyled">
-                            <ol><a href="#"><i class="icon-map" style="color: red;"></i>    11th Floor Cyberone Building Eastwood Cyberzone Libis QC</a></ol>
-                            <ol><a href="#"><i class="icon-call-end" style="color: red;"></i>   +63 2 975 1046</a></ol>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                        <p style="margin-top: 35px; color:#777777;">copyrights 2016 Elite Workgroup. All Rights Reserved</p>
-                    </div>
-                    <div class="col-md-4 col-sm-4" style="text-align: center;">
-                        <img class="logo-default" src="../../../../../images/app/logo_default.png" alt="Logo">
-                    </div>
-                    <div class="col-md-4 col-sm-4">
                         <ul class="copyright-socials">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <h3>sitemap</h3>
+                        <ul class="list-footer">
+                            <li><a href="/translation">translations</a></li>
+                            <li><a href="/interpreting">interpreting</a></li>
+                            <li><a href="/about">about</a></li>
+                            <li><a href="/news">news</a></li>
+                            <li><a href="/faq">faq</a></li>
+                            <li><a href="/contact">contact us</a></li>
+                        </ul>
+                    </div>
+                     <div class="col-md-2 col-sm-2">
+                        <h3>SUPPORT</h3>
+                        <ul class="list-footer">
+                            <li><a href="#">Our Partners</a></li>
+                            <li><a href="#">Quality Policy</a></li>
+                            <li><a href="#">privacy Policy</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">support</a></li>
+                            <li><a href="#">legal</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <h3>Contact</h3>
+                        <ul class="list-footer">
+                            <li><a href="#">11th Floor Cyberone Building Eastwood Cyberzone Libis QC</a></li>
+                            <li><a href="#">  +63 2 975 1046</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        
+                    </div>
+                    <div class="col-md-6 col-sm-6" style="text-align: right;">
+                        <p style="margin-top: 35px; color:#777777;">copyrights 2016 Elite Workgroup. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
@@ -194,5 +195,7 @@
 	    RevosliderInit.initRevoSlider();
 	});
 	</script>
+
+    @yield('buttom_scripts')
 	</body>
 </html>
