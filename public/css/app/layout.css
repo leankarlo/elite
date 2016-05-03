@@ -1530,7 +1530,7 @@ a:focus {
 .about-contact .title h1{
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-family: 'Open Sans' !important;
+  /*font-family: 'Open Sans' !important;*/
 }
 
 .about-contact .contact-details h1{
