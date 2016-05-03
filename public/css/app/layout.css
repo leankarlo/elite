@@ -60,9 +60,6 @@
   line-height: 50px;
   display: inline-block;
   vertical-align: middle;
-  transition-duration: 400ms;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 }
 .page-header .navbar-brand img {
   width: 115px;
@@ -188,9 +185,6 @@
     height: 82px;
     max-height: 82px;
     line-height: 450px;
-    transition-duration: 400ms;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
   }
   .page-on-scroll .page-header .navbar-brand img.logo-scroll {
     display: block;

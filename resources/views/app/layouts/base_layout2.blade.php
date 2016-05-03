@@ -42,7 +42,7 @@
     	            <div class="col-md-6 col-sm-6 additional-nav" style="margin-top: 5px;">
     	                <ul class="list-unstyled list-inline pull-right" style="color: #808080 !important;">
     	                	<li><i class="icon-call-end"></i><span> +1 456 6717</span></li>
-    	                    <li><i class="icon-lock"></i><span> <a>Log In</a></span></li>
+    	                    <li><i class="icon-lock"></i><span> <a href="#">Log In</a></span></li>
     	                    <li> Eng <i class="fa fa-angle-right"></i></li>
     	                </ul>
     	            </div>
