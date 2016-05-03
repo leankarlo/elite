@@ -33,14 +33,14 @@
                     <h1>About Us</h1>
                     <p>Maecenas congue tortor luctus neque placerat, vestibulum suscipit turpis vulputate. Proin nec lorem molestie, sagittis dui et, aliquam leo. Vestibulum risus diam, malesuada efficitur malesuada.</p>
 
-                    <a href="javascript:aboutMore();">read more <i class="fa fa-long-arrow-right"></i></a>
+                    <a href="javascript:aboutMore();" id="about-readmoreLink">read more <i class="fa fa-long-arrow-right"></i></a>
                 </div>
                 <div class="col-md-6 col-sm-6 pad-right">
                     <img class="logo-default" src="../../../../../images/app/about/aboutimg1.png" alt="Logo">
                 </div>
             </div>
-            <div class="row">
-                <div class="about-readmore" >
+            <div class="about-readmore">
+                <div class=" row" >
                     <div class="col-md-4 col-sm-4"> 
                         <h2><i class="icon-user"></i> Amazing Support</h2>
                         <p>We can help you every step of the way, from the time you sign up we're always availableto help you   configure and create your actions and tune your reminders for the best result.</p>
