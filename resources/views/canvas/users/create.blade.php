@@ -66,10 +66,7 @@
 								<label class="col-md-3 control-label">Access Type</label>
 								<div class="col-md-6">
 									<select class="form-control select2me" name="accessType" id="accessType">
-										<option value="">Select...</option>
-										<option value="0">Super Admin</option>
-										<option value="1">Manager</option>
-										<option value="2">Associate</option>
+
 									</select>
 								</div>
 							</div>
@@ -122,8 +119,9 @@
 	<script src="{{ asset('js/admin/pages/users/create.js')}}"></script>
 	<script>
 	jQuery(document).ready(function() {    
-	   Images.initImages(); 
+	   Images.initImages();	   
 	   Images.init();
+	   Images.initAccessTypes();
 	});
 	</script>
 

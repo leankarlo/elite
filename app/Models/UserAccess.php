@@ -14,11 +14,5 @@ class UserAccess extends Model
 {
 
     protected $table = 'users_access';
-
-    public function User()
-    {
-        return $this->belongsTo('App\Models\User','user_access','id');
-    }
-	
 	
 }

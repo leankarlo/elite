@@ -48,10 +48,7 @@
 								<label class="col-md-3 control-label">Access Type</label>
 								<div class="col-md-6">
 									<select class="form-control accessType" name="accessType" id="accessType">
-										<option value="">Select...</option>
-										<option value="0">Super Admin</option>
-										<option value="1">Manager</option>
-										<option value="2">Associate</option>
+
 									</select>
 								</div>
 							</div>
@@ -105,6 +102,7 @@
 	<script>
 	jQuery(document).ready(function() {    
 	   User.initImages(); 
+	   User.initAccessTypes();
 	   User.initUser();
 	   User.init();
 	});

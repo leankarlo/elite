@@ -51,5 +51,9 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasOne('App\Models\UserAccess','id','user_access');
     }
 
+    public function UserAccess()
+    {
+        return $this->hasMany('App\Models\UserAccessModule', 'access_id' ,'user_access' );
+    }
 	
 }

@@ -40,8 +40,20 @@
 			});
 			// get modules
 	
-			// only display module that is allowed to the current user
-			Route::get('module/getAll', 'Canvas\ModuleController@getUserModules');
+			Route::group(array('prefix'=>'module'), function(){
+
+				// only display module that is allowed to the current user
+				Route::get('/getAll', 'Canvas\ModuleController@getUserModules');
+
+				Route::get('/getModules', 'Canvas\ModuleController@getUserAccessModules');
+
+			});
+			
+
+			/*
+			Route::get('submodule/get&module_id={id}', 'Canvas\SubModuleController@getUserAccessSubModules');
+			*/
+
 		/** END Main Canvas **/
 
 		/** User Module **/
@@ -94,6 +106,8 @@
 					
 						Route::get('/get&id={id}',
 						array('uses'=>'Canvas\UserController@getAccessType'));
+
+						Route::get('/delete&id={id}','Canvas\UserController@DeleteAccessType');
 					
 					});
 					
@@ -328,18 +342,8 @@
 						array('uses'=>'Canvas\ContactController@activate'));
 						
 					});
-				/** END Contact **/
+				/** END Promos **/
 				
-				/** about **/
-					Route::group(array('prefix'=>'about'), function(){
-					
-						Route::get('/', function () {
-							return view('canvas/pages/about');
-						});
-						
-					});
-				/** END Contact **/
-
 			});
 		/** END Pages Module **/
 
@@ -416,34 +420,3 @@
 
 /* CANVAS ROUTES END */
 
-/** Web App Route **/
-
-Route::get('/', function () {
-	    return view('app/home/index');
-	});
-
-Route::get('/about', function () {
-	    return view('app/about/index');
-	});
-
-Route::get('/news', function () {
-	    return view('app/blog/index');
-	});
-
-Route::get('/faq', function () {
-	    return view('app/faq/index');
-	});
-
-Route::get('/interpreting', function () {
-	    return view('app/interpreting/index');
-	});
-
-Route::get('/translation', function () {
-	    return view('app/translation/index');
-	});
-
-Route::get('/contact', function () {
-	    return view('app/contact/index');
-	});
-	
-/** END Web App Route **/	

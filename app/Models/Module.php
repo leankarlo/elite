@@ -16,8 +16,7 @@ class Module extends Model
     protected $table = 'modules';
 
     public function subModules()
-    {
+    {	
         return $this->hasMany('App\Models\SubModule','module_id','id');
     }
-
 }

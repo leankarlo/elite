@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Canvas;
 
 use App\Models\Module;
-use App\Models\User;
+use App\Models\SubModule;
 use App\Models\UserAccessModule;
 use Validator;
 use Mail;
@@ -14,7 +14,7 @@ use Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ModuleController extends Controller
+class SubModuleController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -37,32 +37,20 @@ class ModuleController extends Controller
     {
     }
 
-
-    /**
-     * Get all the modules that is allowed to the current user
-     *
-     * @param  array  $data
-     * @return Modules
-     */
-    protected function getUserModules()
+    protected function getUserAccessSubModules($id)
     {
         $accessType = Auth::user()->user_access;
 
-        $modules = User::where('id', Auth::user()->id)
-        ->with('UserAccess.Module.subModules')
+        $modules = SubModule::distinct()->whereIn('id', function($q) use($id, $accessType) {
+            $q->select('sub_module_id')
+            ->from(with(new UserAccessModule)->getTable())
+            ->where('module_id', $id)
+            ->where('access_id', $accessType);
+        })
         ->get();
 
-        return Response::json(array('data' => $modules));
+        return Response::json($modules);
     }
 
-
-    protected function getUserAccessModules(){
-        $accessType = Auth::user()->user_access;
-
-        $modules = User::where('id', Auth::user()->id)
-        ->with('UserAccess.Module.subModules')
-        ->get();
-
-        return Response::json(array('data' => $modules));
-    }
 }
+

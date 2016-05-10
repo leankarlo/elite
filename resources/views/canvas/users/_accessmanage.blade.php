@@ -1,4 +1,4 @@
-<!-- /.modal -->
+/.modal -->
 <div class="modal fade bs-modal-lg" id="accessTypeManagement" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -59,7 +59,9 @@
 								</div>
 								<div class="portlet-body" >
 									<div class="clearfix">
-										<a class="btn green-haze btn-block" href="#" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i> Delete Selected </a>
+										<a onclick="DeleteMultipleAccessType()" id="DeleteMultipleAccessType" class="btn green-haze btn-block" href="#" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i> Delete Selected </a>
+										
+										<!-- "alert(\'Are you sure you want to REMOVE the selected Access Type?\', 'deleteUser' )" -->
 									</div>
 								</div>
 							</div>
@@ -75,4 +77,4 @@
 	</div>
 	<!-- /.modal-dialog -->
 </div>
-<!-- /.modal -->
+<!-- /.modal

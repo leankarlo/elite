@@ -534,33 +534,42 @@ var Canvas = function() {
                 url: url,
                 async: false,
                 type: "get",
-                success: function (modules) {
+                success: function (result) {
                 
-                    $.each(modules, function (idx, module) {
-                        var sub_module_id = 'sub-menu-' + module.id
-                        var baseUrl = module.url;
-                        $("#page-sidebar-menu").append('<li>'
-                                    + '    <a href="javascript:;">'
-                                    + '    <i class="'+module.icon_class+'"></i>'
-                                    + '    <span class="title">'+module.name+'</span>'
-                                    + '    <span class="arrow "></span>'
-                                    + '    </a>'
-                                    + '    <ul class="sub-menu" id="'+sub_module_id+'">'
-                                    + '    </ul>'
+                    $.each(result.data, function (idx, modules) {
+
+                        $.each(modules.user_access, function(idx, userAccess){
+                             //console.log(userAccess);
+                            $.each(userAccess.module, function(idx, module){
+                                //console.log(sub_module);
+                                var sub_module_id = 'sub-menu-' + module.id
+                                var baseUrl = module.url;
+                                $("#page-sidebar-menu").append('<li>'
+                                            + '    <a href="javascript:;">'
+                                            + '    <i class="'+module.icon_class+'"></i>'
+                                            + '    <span class="title">'+module.name+'</span>'
+                                            + '    <span class="arrow "></span>'
+                                            + '    </a>'
+                                            + '    <ul class="sub-menu" id="'+sub_module_id+'">'
+                                            + '    </ul>'
+                                            + '</li>');
+
+                                $.each(module.sub_modules, function(idx, submodule){
+                                    //console.log(submodule);
+                                    //loop for sub_module_id
+                                    $("#"+sub_module_id).append(
+                                      '<li>'
+                                    + '    <a href="../../../../../../canvas/'+baseUrl+'/'+submodule.url+'">'
+                                    + '    <i class="'+submodule.icon_class+'"></i>'
+                                    + '    '+submodule.name+'</a>'
                                     + '</li>');
 
+                                });
 
-
-                        $.each(module.sub_modules, function(idx, sub_module){
-                            $("#"+sub_module_id).append(
-                                  '<li>'
-                                + '    <a href="../../../../../../canvas/'+baseUrl+'/'+sub_module.url+'">'
-                                + '    <i class="'+sub_module.icon_class+'"></i>'
-                                + '    '+sub_module.name+'</a>'
-                                + '</li>');
-
+                            });
 
                         });
+                        
                     });
                 },
                 error: function () {

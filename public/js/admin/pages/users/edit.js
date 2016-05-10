@@ -187,7 +187,30 @@ var User = function () {
                     },
                 ]
             } );
-        }
+        },
+		
+		initAccessTypes: function (els){
+            var url = '../../../../../canvas/users/accesstype/getall'
+            $.ajax({
+                url: url,
+                async: false,
+                type: "get",
+                success: function (result) {
+                    var options = null;
+                    $.each(result.data, function (idx, access) {
+                        options = options + '<option value="'+access.id+'">'+access.name+'</option>';
+                    });
+                    $("#accessType").html(options);
+                    
+                },
+                error: function () {
+                    toastr.error('Something went wrong please contact ADMIN', 'ERROR');
+                }
+            });
+    
+            //$('#UsersTable').DataTable().ajax.reload();
+
+        }	
 
     };
 }();

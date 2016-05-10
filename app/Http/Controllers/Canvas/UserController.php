@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Canvas;
 
 use App\Models\User;
 use App\Models\UserAccess;
+use App\Models\UserAccessModule;
 use Redirect;
 use View;
 use Response;
@@ -56,7 +57,8 @@ class UserController extends Controller
     }
 
     protected function getUser($id){
-        $user = User::with(['image'])->find($id);
+        //$user = User::with(['image'])->find($id);
+		$user = User::with(['image'])->with(['AccessType'])->find($id);
         return Response::json(array('result'=>'true', 'data'=>$user));
     }
 
@@ -136,7 +138,7 @@ class UserController extends Controller
 	// ACCESS TYPE
 	
 	// GET ALL
-	protected function getAllAccessTypes()
+	protected function getAllAccessTypes()	
     {
         return Response::json(array('data' => UserAccess::all() )) ;
     }
@@ -156,9 +158,21 @@ class UserController extends Controller
 	
 	// GET ACCESS TYPE
 	protected function getAccessType($id){
-        $AccessType = UserAccess::find($id);
-        return Response::json($AccessType);
+		return Response::json(array('data' => UserAccess::find($id) ) );
     }
-	
+
+    // DELETE ACCESS TYPE
+    protected function DeleteAccessType($id){
+        try{
+            $accessType = UserAccess::where('id',$id)->delete();
+            $userAccessModule = UserAccessModule::where('access_id',$id)->delete();
+
+            return Response::json(array('result' => 'true', 'message' => 'Successfully deleted.' ));
+        }
+        catch(Exception $e){
+            return Response::json(array('result' => 'false', 'message' => 'Error on deleting access type.', 'data' => $e ));
+        }
+    }
+
 	
 }

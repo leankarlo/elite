@@ -14,10 +14,10 @@ class SubModule extends Model
 {
 
     protected $table = 'sub_modules';
-
+    /*
     public function modules()
     {
         return $this->belongsTo('App\Models\Module','module_id');
     }
-
+	*/
 }

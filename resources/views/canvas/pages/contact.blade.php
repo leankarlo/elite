@@ -51,6 +51,24 @@
 				</div>
 			</div>
 		</div>
+		<div class="col-md-3">
+			<div class="page-sidebar-wrapper">
+				
+				<div class="page-sidebar md-shadow-z-2-i  navbar-collapse collapse">
+					<ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+						
+						<li>
+							<a data-toggle="modal" href="#categoryLevelManagement" id="CategoryLevelManagement">
+								<i class="icon-flag"></i>
+								Social Media Accounts
+							</a>
+						</li>
+			
+					</ul>
+					<!-- END SIDEBAR MENU -->
+				</div>
+			</div>
+		</div>
 	</div>
 
 	{{-- MODALS --}}

@@ -14,7 +14,7 @@ var NewAccessType = function () {
 
             },
             messages: {
-                password: {
+                name: {
                     required: "Name is required."
                 },
             },
@@ -40,8 +40,8 @@ var NewAccessType = function () {
 
         $('.form_create_accesstype input').keypress(function(e) {
             if (e.which == 13) {
-                if ($('.register-form').validate().form()) {
-                    $('.register-form').submit();
+                if ($('.form_create_accesstype').validate().form()) {
+                    $('.form_create_accesstype').submit();
                 }
                 return false;
             }

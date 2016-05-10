@@ -122,10 +122,10 @@
 									* </span>
 									</label>
 									<div class="col-md-10">
-										<input type="hidden" class="form-control" name="access_type_id" id="id">
-										<input type="text" class="form-control" name="editaccesstypename" id="editaccesstypename" placeholder="">
+										<input type="hidden" class="form-control" name="accesstype_id" id="accesstype_id">
+										<input type="text" class="form-control" name="edit_accesstype_name" id="edit_accesstype_name" placeholder="">
 									</div>
-								</div>
+								</`div>
 							</div>
 							<div class="form-actions noborder">
 								<button type="submit" class="btn blue" data-dismiss="modal" onclick="">Submit</button>
@@ -163,8 +163,6 @@
 			Manage.init();
 			AccessType.init();
 			NewAccessType.init();
-			EditAccessType.init();
-			EditAccessType.initEditAccessType();		
 		});
 	</script>
 
